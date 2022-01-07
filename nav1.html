@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .all{
+            width: 1450px;
+            margin: 0 auto;
+        }
+        header{
+            width: 100%;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            padding: 25px 10px;
+        }
+        .container{
+            margin: 0 auto;
+            width: 1400px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-grow: wrap row;
+        }
+        .container .logo h3{
+           display: inline-block;
+           color: rgb(228, 221, 143);
+           margin-left: 30px;
+        }
+        .container .logo p{
+            display: inline-block;
+            font-size: 25px;
+        }
+        .nav-btn .nav1-btn{
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            margin: 0 3px;
+        }
+        .nav-btn .nav2-btn{
+            background-color: rgb(228, 221, 143);
+            width: 180px;
+            height: 40px;
+        }
+        .heading-nav{
+            display: flex;
+            justify-content: space-between;
+            width: 1400px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        .heading-nav .logo{
+            margin: 20px;
+            font-size: 25px;
+        }
+        .heading-nav .catagory{
+            width: 40%;
+            height: 50px;
+            border: 1px solid rgb(185, 185, 99);
+            margin-right: 90px;
+        }
+        .heading-nav .catagory .blogs{
+            border: none;
+            width: 200px;
+            height: 30px;
+            font-size: 20px;
+        }
+        .catagory #catagory{
+            background-color: rgb(163, 159, 159);
+            width: 40%;
+            height: 30px;
+            margin: 10px;
+        }
+        .catagory #icon{
+            width: 50px;
+            height: 100%;
+            background-color: rgb(185, 185, 99);
+            border: none;
+            margin-left: 30px;
+
+        }
+        .catagory .icon{
+            color: rgb(255, 249, 249);
+            font-size: 20px;
+            
+        }
+        .heading-nav .menu p{
+            display: inline-block;
+            font-size: 25px;
+            margin: 25px;
+        }
+        .signup{
+            background: #000;
+            color: white;
+            font-size: 20px;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            padding: 10px 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+        #signup{
+            border-right: 1px solid rgb(185, 185, 99);
+            padding: 0 20px;
+        }
+        .contact{
+            font-size: 20px;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            padding: 10px 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+        #contact{
+            border-right: 1px solid rgb(194, 194, 98);
+            padding: 0 20px;
+        }
+        .nav-hr{
+            background-color: rgb(185, 185, 99);
+            width: 1400px;
+            height: 1px;
+            margin:  0 auto;
+        }
+        /* main-section */
+        main{
+            width: 1400px;
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+        .main-header{
+            display: flex;
+            justify-content: space-between;
+        }
+        .main-header h2{
+            display: inline-block;
+            margin-right: 15px;
+            padding: 20px;
+        }
+        .main-icon .in, .tw, .wh{
+            font-size: 50px;
+            margin-right: 40px;
+        }
+        .main-desc{
+           background-image: url(img/img8.jpg);
+           border-radius: 10px;
+           width: 1400px;
+           height: 700px;
+           background-repeat: no-repeat;
+           background-size: 1400px;
+           background-color: green;
+           position: relative;
+        }
+        .main-card{
+            width: 450px;
+            height: 400px;
+            background-color: white;
+            opacity: 85%;
+            position: absolute;
+            right: 80px;
+            top: 0px;
+            bottom: 40px;
+            margin: auto;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-head #time{
+            float: left;
+            padding: 10px 0;
+        }
+        .card-head .time{
+            padding-right: 5px;
+        }
+        .card-head #seen{
+            float: right;
+            padding: 10px 0;
+            margin-bottom: 10px;
+        }
+        .card-head .seen{
+            padding-right: 10px;
+        }
+        .card-title .bold{
+            font-size: 50px;
+        }
+        .clear{
+            clear: both;
+            content: "";
+        }
+        .card-desc p{
+            letter-spacing: 2px;
+            font-size: 20px;
+            font-family: 'Spline Sans', sans-serif;
+            padding: 2px;
+        }
+        .card-footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-footer .logo .image{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .card-footer .name{
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        .card-footer .logo .share{
+            font-size: 30px;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        .card-footer .logo .bookmark{
+            font-size: 30px;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        /* .populer-section */
+        .populer h1{
+            display: inline-block;
+            margin: 30px 15px 15px 0;
+            font-size: 30px;
+        }
+        .populer-hr{
+            margin-bottom: 30px;
+            width: 100%;
+            background-color: black;
+        }
+        /* product-sections */
+
+        .product{
+            background-color: rgb(233, 233, 233);
+            display: flex;
+            flex-grow: row wrap;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+        .card{
+            width: 400px;
+            height: 600px;
+            margin-top: 30px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .card-desc{
+            padding: 10px;
+        }
+        .card .card-head #time{
+            float: left;
+            padding-left: 10px;
+        }
+        .card .card-head #seen{
+            float: right;
+            padding-right: 10px;
+        }
+        .card .card-title{
+            font-size: 30px;
+            letter-spacing: .8px;
+            padding: 10px;
+        }
+        .card-img .images{
+            width: 100%;
+            height: 200px;
+        }
+        .card-footer{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <h3>Subscribe</h3>
+                    <p>to get notifications whenever a new blog drops in !</p>
+                </div>
+                
+                <div class="nav-btn">
+                    <input class="nav1-btn" type="mail" value="your email ID:">
+                    <input class="nav2-btn" type="button" value="SUBSCRIBE">
+                </div>
+            </div>
+        </header>
+            <div class="heading-nav">
+                <div class="logo">
+                    <h2>Mr. Blogger</h2>
+                </div>
+                <div class="catagory">
+                    <select name="catagory" id="catagory">
+                        <option value="">All Catagory</option>
+                        <option value="">village</option>
+                        <option value="">Country</option>
+                    </select>
+                    <input class="blogs" type="text" value="Search Blogs....">
+                    <button id="icon"><i class="fas fa-search icon"></i></button>
+                </div>
+                <div class="menu">
+                    <p id="signup"><i class="fas fa-user-plus signup"></i>Sign Up</p>
+                    <P id="contact"><i class="fas fa-envelope contact"></i>Contact</P>
+                </div>
+            </div>
+            <hr class="nav-hr">
+            <main>
+                <div class="main-header">
+                    <div class="menu">
+                        <h2>Home</h2>
+                        <h2>Favourites</h2>
+                        <h2>Abouts</h2>
+                    </div>
+                    <div class="main-icon">
+                        <i class="fab fa-instagram in"></i>
+                        <i class="fab fa-twitter tw"></i>
+                        <i class="fab fa-whatsapp wh"></i>
+                    </div>
+                </div>
+                <div class="main-desc">
+                    <div class="main-card">
+                       <div class="card-head">
+                           <p id="time"><i class="far fa-clock time"></i>5 minuts read</p>
+                           <p id="seen"><i class="far fa-clipboard seen"></i>Nature, Affection</p>
+                       </div>
+                       <div class="clear"></div>
+                       <div class="card-title">
+                           <p class="bold">The Misty Hills of Darjeling</p>
+                       </div>
+                       <div class="card-desc">
+                           <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint</p>
+                       </div>
+                       <div class="card-footer">
+                           <div class="logo">
+                               <img class="image" src="img/img7.jpg" alt="image">
+                           </div>
+                           <div class="name">
+                               <p>Pritom roy</p>
+                           </div>
+                           <div class="logo">
+                            <i class="fas fa-share-alt share"></i>
+                            <i class="far fa-bookmark bookmark"></i>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </main>
+
+
+            <div class="populer">
+                <h1>Most Populer </h1><i class="fas fa-greater-than than"></i>
+            </div>
+
+            <hr class="popular-hr">
+
+            <section class="product">
+                <div class="card">
+                    <div class="card-img">
+                        <img class="images" src="img/img.3.jpg" alt="">
+                    </div>
+                    <div class="card-head">
+                            <p id="time"><i class="far fa-clock time"></i>5 minuts read</p>
+                            <p id="seen"><i class="far fa-clipboard seen"></i>Nature, Affection</p>
+                    </div>
+                    <div class="clear"></div>
+                        <div class="card-title">
+                            <h1>The Misty Hills of darjeling</h1>
+                        </div>
+                        <div class="card-desc">
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="logo">
+                                <img class="image" src="img/img7.jpg" alt="image">
+                            </div>
+                            <div class="name">
+                                <p>pritom roy</p>
+                            </div>
+                            <div class="logo">
+                                <i class="fas fa-share-alt share"></i>
+                            <i class="far fa-bookmark bookmark"></i>
+                            </div>
+                        </div>
+                </div>
+
+
+
+                <div class="card">
+                    <div class="card-img">
+                        <img class="images" src="img/img4.jpg" alt="Image">
+                    </div>
+                    <div class="card-head">
+                            <p id="time"><i class="far fa-clock time"></i>5 minuts read</p>
+                            <p id="seen"><i class="far fa-clipboard seen"></i>Nature, Affection</p>
+                    </div>
+                    <div class="clear"></div>
+                        <div class="card-title">
+                            <h1>The Misty Hills of darjeling</h1>
+                        </div>
+                        <div class="card-desc">
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="logo">
+                                <img class="image" src="img/img7.jpg" alt="Image">
+                            </div>
+                            <div class="name">
+                                <p>pritom roy</p>
+                            </div>
+                            <div class="logo">
+                                <i class="fas fa-share-alt share"></i>
+                            <i class="far fa-bookmark bookmark"></i>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">
+                        <img class="images" src="img/img5.jpeg" alt="Image">
+                    </div>
+                    <div class="card-head">
+                            <p id="time"><i class="far fa-clock time"></i>5 minuts read</p>
+                            <p id="seen"><i class="far fa-clipboard seen"></i>Nature, Affection</p>
+                    </div>
+                    <div class="clear"></div>
+                        <div class="card-title">
+                            <h1>The Misty Hills of darjeling</h1>
+                        </div>
+                        <div class="card-desc">
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="logo">
+                                <img class="image" src="img/img7.jpg" alt="Image">
+                            </div>
+                            <div class="name">
+                                <p>pritom roy</p>
+                            </div>
+                            <div class="logo">
+                                <i class="fas fa-share-alt share"></i>
+                            <i class="far fa-bookmark bookmark"></i>
+                            </div>
+                        </div>
+                    </section>
+    </div>
+</body>
+</html>
